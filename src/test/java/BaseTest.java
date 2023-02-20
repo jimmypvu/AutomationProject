@@ -39,4 +39,15 @@ public class BaseTest {
     public static void closeBrowser(){
         driver.quit();
     }
+
+    @DataProvider(name = "incorrectLoginProviders")
+    public static Object[][] getDataFromDataproviders() {
+
+        return new Object[][]{
+                {"invalid@email.com", "invalidPass"},
+                {"demo@mailcom", "invalid"},
+                {"", ""},
+                {"bademail@email", "!@$lklhkla"}
+        };
+    }
 }

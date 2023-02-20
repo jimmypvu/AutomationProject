@@ -12,6 +12,7 @@ public class LoginPage extends BasePage{
     By passwordField = By.cssSelector("#password");
     By rememberMeBox = By.cssSelector("input.form-check-input");
     By loginButton = By.cssSelector("#log-in");
+
     public LoginPage(WebDriver givenDriver){
         super(givenDriver);
     }
@@ -50,5 +51,9 @@ public class LoginPage extends BasePage{
 
     public void isUserLoggedIn(){
         Assert.assertTrue(wait.until(ExpectedConditions.urlMatches("https://demo.applitools.com/app.html")));
+    }
+
+    public void isUserNotLoggedIn(){
+        Assert.assertFalse(wait.until(ExpectedConditions.urlMatches("https://demo.applitools.com/app.html")));
     }
 }

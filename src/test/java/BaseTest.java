@@ -41,7 +41,7 @@ public class BaseTest {
     }
 
     @DataProvider(name = "incorrectLoginProviders")
-    public static Object[][] getDataFromDataproviders() {
+    public static Object[][] getDataFromDataProviders() {
 
         return new Object[][]{
                 {"invalid@email.com", "invalidPass"},

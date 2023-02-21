@@ -36,12 +36,12 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public static void closeBrowser(){
+    static void closeBrowser(){
         driver.quit();
     }
 
     @DataProvider(name = "incorrectLoginProviders")
-    public static Object[][] getDataFromDataProviders() {
+    public static Object[][] getIncorrectLoginProviders() {
 
         return new Object[][]{
                 {"invalid@email.com", "invalidPass"},
